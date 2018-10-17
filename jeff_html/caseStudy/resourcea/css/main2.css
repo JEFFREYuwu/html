@@ -1,0 +1,366 @@
+/* This is a fictional website created in the just course*
+------------------------------------------------------
+
+
+-----------------------------------------------------/
+
+/        *Website color scheme*     
+
+---------------------------------------------------------
+
+Main Colours:
+
+Primary colour - rgb(183, 154, 246); //purple for navigation links
+Secondary colour - rgb(53, 38, 80); //darker purple
+Third colour - rgb(200, 177, 250); //lighter purple/
+
+/**/
+
+/* custom fonts---------------------------------------------- */
+
+
+
+
+
+
+@font-face {
+    font-family: '28_days';
+    src: url(../../vendors/fonts/28_days_later-webfont.eot);
+    src: url(../../vendors/fonts/28_days_later-webfont.eot?#iefix) format('embedded-opentype'),
+         url(../../vendors/fonts/28_days_later-webfont.woff2) format('woff2'),
+         url(../../vendors/fonts/28_days_later-webfont.woff) format('woff'),
+         url(../../vendors/fonts/28_days_later-webfont.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+
+
+/*-------------------  DEFAULT STYLING---------------------------- */
+
+/* here we set the sizing to border box so that the padding and the border have no barring on the width we set */
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    
+}
+
+
+
+/*  All images and video are set to 100% of their parent container*/
+
+img, video { 
+    width: 100%;
+}
+
+
+/* Body attributes that the rest of the page inherits*/
+
+body{ 
+    
+    font-family: 'Mukta', sans-serif;
+    font-family:sans-serif;
+    font-size: 16px;
+    color:rgb(42, 42, 42);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+      
+}
+
+/* removes the styling that comes with the anchor tag*/
+
+a {
+    text-decoration: none;
+}
+
+/*----------------------------------------------------------------
+
+
+  HOMEPAGE STYLING 
+
+-----------------------------------------------------------------*/
+
+.HOMEImage{
+    position: relative;
+    background-image: url(../img/trainerHomePage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    background-position: center 0;
+    height: 100vh;
+    
+}
+
+
+.logoC{
+    position: absolute;   
+    width: 40px;
+    top: auto; 
+    left: 1
+    
+        
+}
+
+.BasketC{
+    
+    position: absolute;
+    top: auto;
+    left:  45vw;
+}
+
+
+.headerC{
+    
+    position: fixed;
+    width:100%;
+    
+   
+    
+}
+
+
+
+
+.fa-shopping-basket{
+    font-size: 2em;
+    color: rgb(200,177, 250);
+    
+}
+
+
+
+.navC{
+    background-color: rgb(53, 38, 80);
+    width:100%;
+    height:50px;
+    border-bottom: 2px solid rgb(200,177, 250);
+    
+    
+}
+
+
+
+/*this is three bar option*/
+
+#mobile-menu{
+    
+   font-size: 2em;
+    text-align: center;
+    color: rgb(255,255,255);
+    background-color:rgba(0,0,0,0.5);
+    
+    margin: 0 5vw 0 85vw;
+    padding: 7px 3%;    
+    
+}
+    
+   
+/*navigation area*/
+
+
+
+/*removing styling from our unordered list*/
+
+
+.menu-items{
+    
+    list-style: none;
+    padding:0;
+    margin:0;
+    display: none;
+      
+}
+    
+nav li { 
+          
+        color: rgb(255,255,255);
+        text-align: right;
+        border-top: 2px solid rgba(200,177,250, 0.2);
+        padding: 15px 8px 15px 0px 
+        
+    }
+
+
+li a{
+    color: rgb(255,255,255);
+    
+}
+    
+.mainHeading{
+    
+   font-family: 'Lovers Quarrel', cursive;
+   color: rgb(255,255,255);
+    font-size: 2em;
+    letter-spacing: 2px;
+    font-weight: lighter;
+      
+     margin: 45vh auto 0 25vw;
+    
+}
+    
+.slogan{  
+    font-family: '28_days';
+    color: rgb(255,255,255);
+    font-size: 2em;
+    letter-spacing: 3px;
+    padding: 150px 3vw 0 0;
+    text-align: right;
+  
+}  
+
+/*Designing our button*/
+
+.newButton{
+    
+    color: rgb(255,255,255);
+    border: 1px solid rgb(255,255,255);
+    padding: 15px 20px;
+    background-color: rgba(200,177, 250, 0.2);
+    text-transform: uppercase;
+    border-radius: 7px 7px;
+      
+/*  applying our animation 
+    */
+    
+    animation-name: neon;
+    animation-duration: 1.5s; 
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+/*    positioning on screen*/
+    
+    margin: 10px auto 0 25vw;
+    
+    
+}
+    
+/* Animating our buttons  */
+        
+
+
+@keyframes neon{
+    
+/* the text-shadow property has 4 values
+    
+1. horizontal shadow-required
+ 2. vertical shadow-required
+3 blur radius -optional
+    4 color- option
+    
+    
+    */
+    
+    
+    from {
+        text-shadow: 0 0 10px rgb(255,255,255),
+         0 0 20px rgb(255,255,255),
+         0 0 30px rgb(255,255,255),
+         0 0 40px rgb(128,0,128),
+         0 0 50px rgb(128, 0, 128),
+         0 0 80px rgb(128, 0, 128),
+         0 0 100px rgb(128, 0, 128),
+         0 0 150px rgb(128, 0, 128);
+    
+   
+    }
+    
+    to{
+         text-shadow: 0 0 5px rgb(255,255,255),
+         0 0 10px rgb(255,255,255),
+         0 0 15px rgb(255,255,255),
+         0 0 20px rgb(128,0,128),
+         0 0 25px rgb(128, 0, 128),
+         0 0 30px rgb(128, 0, 128),
+         0 0 50px rgb(128, 0, 128),
+         0 0 75px rgb(128, 0, 128);
+    
+    }
+    
+}
+/*  ------------------------------------------------------------------------
+                     PRODUCT PAGE
+    ------------------------------------------------------------------------
+    */
+    
+    
+    #productSection{
+        
+        
+        text-align: center;
+           
+        
+    }
+    
+    
+    
+    h1{
+        
+        
+        text-transform: uppercase;
+        font-weight: lighter;
+}
+    
+   
+     p{
+  
+       
+        text-transform: uppercase;
+        
+    }
+    
+    
+/*    designing our buttons
+    */
+    
+    
+    .addToCart{
+        
+        background-color: rgb(53, 38, 80);
+        color: rgb(255,255,255);
+        padding: 15px 20px;
+/*        border below curve*/
+           
+        border-radius: 7px 7px;
+        border: 1px solid rgba(255, 255, 255, 0.5;)
+        
+     }
+
+.addToCart a{
+      color: rgb(255, 255, 255);
+    
+    
+}
+
+
+/* psuedo selector*/
+    
+.addToCart a::after {
+    
+    
+          font-family: "Font Awesome 5 free";
+          font-weight: 900;
+          content: "\f218";
+          
+    
+}
+    
+/* sales page----------------------------------------------------------
+
+*/
+
+#sales{
+    
+      text-align: center;
+    
+    
+    
+    
+}
+
