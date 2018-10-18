@@ -21,7 +21,8 @@ Third colour - rgb(200, 177, 250); //lighter purple/
 
 
 
-
+/*imported CSS to use font from font-face website.
+*/
 
 @font-face {
     font-family: '28_days';
@@ -63,6 +64,9 @@ img, video {
 
 body{ 
     
+    
+/* Mukta icon called directly as in html library is the declared*/
+    
     font-family: 'Mukta', sans-serif;
     font-family:sans-serif;
     font-size: 16px;
@@ -103,7 +107,7 @@ a {
     position: absolute;   
     width: 40px;
     top: auto; 
-    left: 1
+    left: 1;
     
         
 }
@@ -111,7 +115,7 @@ a {
 .BasketC{
     
     position: absolute;
-    top: auto;
+    top: 1.3vh;
     left:  45vw;
 }
 
@@ -127,6 +131,7 @@ a {
 
 
 
+/* scales icon handles the actual icon*/
 
 .fa-shopping-basket{
     font-size: 2em;
@@ -134,6 +139,8 @@ a {
     
 }
 
+
+/* div container for the unordered list*/
 
 
 .navC{
@@ -147,7 +154,8 @@ a {
 
 
 
-/*this is three bar option*/
+/*this is three bar option*
+/ sets value a relation postioon in div that has nav*/
 
 #mobile-menu{
     
@@ -166,7 +174,7 @@ a {
 
 
 
-/*removing styling from our unordered list*/
+/*removing styling from our unordered list, will not display--*/
 
 
 .menu-items{
@@ -201,7 +209,7 @@ li a{
     letter-spacing: 2px;
     font-weight: lighter;
       
-     margin: 45vh auto 0 25vw;
+     margin: 45vh auto 0 30vw;
     
 }
     
@@ -224,6 +232,10 @@ li a{
     padding: 15px 20px;
     background-color: rgba(200,177, 250, 0.2);
     text-transform: uppercase;
+    
+/* Below code makes button curved   */
+    
+    
     border-radius: 7px 7px;
       
 /*  applying our animation 
@@ -236,7 +248,7 @@ li a{
     
 /*    positioning on screen*/
     
-    margin: 10px auto 0 25vw;
+    margin: 10px auto 0 30vw;
     
     
 }
@@ -332,6 +344,11 @@ li a{
         
      }
 
+
+
+/* class which relates to button add to cart this acceses  the attributes for the a element */
+
+
 .addToCart a{
       color: rgb(255, 255, 255);
     
@@ -339,7 +356,12 @@ li a{
 }
 
 
-/* psuedo selector*/
+/* psuedo selector
+
+used to put basket image into button
+
+
+*/
     
 .addToCart a::after {
     
@@ -358,9 +380,235 @@ li a{
 #sales{
     
       text-align: center;
+}
+
+/* calling the details of each image using the tag*/
+figcaption{
+    
+      font-size: 0.8em;
+    
+}
+
+/* strong text relates to figure caption */
+strong{
+    
+    
+/* makes text display on the line below*/
+    display:block;
+}
+
+
+/*Flexboxes for product and sales
+*/
+
+.flexbox{
+    
+     display: flex;
+     flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------- LARGER MOBILE SIZE 568---------------------------
+---------------------------------------------------*/
+
+
+
+
+
+/* used for media query to adjust website for different devices*/
+/*ADRESSESS THE SCREEN AT 568PX AND ABOVE*/
+
+@media screen and (min-width: 568px){
+    
+    
+    
+    
+
+.mainHeading{
+    
+     margin: 45vh auto 0 37vw;
+    
+}
+    
+
+.newButton{
+    
+    margin: 10px auto 0 37vw;
+    
+    
+}
+
+
+}
+
+/* MEDIA QUERY FOR TABLET*/
+@media screen and (min-width: 768px){
+
+    .mainHeading{
+
+     margin: 2.5vh auto 0 76vw;
+    
+}
+    
+
+.newButton{
+    
+    margin: 10px auto 0 76vw;
+    
+    
     
     
     
     
 }
 
+/* MEDIA QUERY FOR DESKTOP   */
+    
+    
+    @media screen and (min-width: 1024px){
+
+.logoC{
+    position: absolute;
+    width: 90px;
+    top: 6vh;
+    left: 5vw;
+    
+        
+}
+
+
+/*.headerC{*/
+
+
+.navC{
+    
+   text-align: right;
+    border-bottom: none;  
+    padding:10px 0;
+    height: auto;
+}
+        
+        
+        
+/*  calling two classes together to assign both of the
+        related to basket image put in div and icon put in a span using a id class*/
+        
+#mobile-menu{
+    
+  display: none;
+    
+}
+ 
+/*  POSITION THE DIV THAT CONTAINS BASKET IMAGE*/
+        
+        .BasketC{
+        position: absolute;
+        margin: 0 0 0 52vw;
+        
+        }
+        
+/*  RESIZES THE ICON THAT IS THE IMAGE OF A BASKET*/
+        
+      .fa-shopping-basket{
+    font-size: 1em;
+    color: rgb(200,177, 250);
+    
+}          
+
+
+.menu-items{
+    
+    display:inline;
+      
+}
+        
+        
+  .menu-items li {
+    border-top: none;
+    display:inline;
+      
+}      
+        
+        
+        
+    
+nav li { 
+          
+        
+        text-align: right;
+        border-top: 2px solid rgba(200,177,250, 0.2);
+        padding: 15px 5px 15px 0;
+        
+    }
+
+
+li a{
+    padding: 20px;
+    margin: 0 5px;
+    
+}
+    
+/* hovers over a makes a color appear*/
+        
+        nav a:hover{
+            
+            color:rgb(200,177,250);
+        }       
+        
+        
+        nav:active{
+            color:rgb(200,177,250);
+            
+        }
+        
+        
+/*        nav:visited
+            color:rgb(128, 0, 128);
+            
+        }
+        */
+        
+        
+        
+        
+.mainHeading{
+   
+      
+     margin:25vh auto 0  4.6vw;
+    
+}
+    
+.slogan{  
+    font-size: 3em;
+    padding: 210px 0 0 0;
+    margin: 0px 23vh 0;
+  
+}  
+
+
+.newButton{
+    
+    
+    margin: 10px auto  0 4.6vw;
+}
+    
+    
+
+
+        
